@@ -1,0 +1,5 @@
+grpc:
+  client:
+    grpc-abhishek-service:
+      address: static://localhost9000
+      negotiationType: plaintext
