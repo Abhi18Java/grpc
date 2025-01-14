@@ -26,4 +26,12 @@ service BookAuthorService {
   //client will send one request and server will respond with one response.
   rpc getAuthor(Author) returns(Author){}
 
+  //sever streaming - Asynchronous
+  //client will send one request and server will send stream of response to the client.
+  rpc getBookByAuthor(Author) returns (stream Book) {}
+
+  //client streaming - Asynchronous
+  //client will send a stream of request and server will return one response
+  rpc getExpensiveBooks(stream Book) returns (Book) {}
+
 }
